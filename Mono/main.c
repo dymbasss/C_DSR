@@ -47,9 +47,8 @@ int main()
 	if( fp == NULL)
 		exit(1);
 
-	int m = N;
 
-	for (int j = 0; j < m; j++)
+	for (int j = 0; j < N; j++)
 	{
 		if (mass[j] <= mass[j+1] && mass[j] >= mass[j-1])
 		{ 
