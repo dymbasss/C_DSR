@@ -22,8 +22,8 @@ int fib_n(int n)
 int main()
 {
 	FILE *fp; 
-	char *name = "/home/fox/IB/fib.txt";
-	char *name2 = "/home/fox/IB/mono.txt";
+	char *name = "/home/fox/Mono/fib.txt";
+	char *name2 = "/home/fox/Mono/mono.txt";
 	int n = 0, y = 0;
 	char c;
 
