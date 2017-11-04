@@ -44,7 +44,6 @@ int main()
 	{
 		n++;
 	}
-
 	fclose(fp);
 
 	fp = fopen(name2, "w");
