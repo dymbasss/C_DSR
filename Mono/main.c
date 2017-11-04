@@ -14,42 +14,12 @@ int fib_n(int n)
 		{
 			x = 0+rand()%100;
 		}
-
 	} 
 	return x;
 }
 
-int main()
+int mono(FILE *fp, int *mass)
 {
-	FILE *fp; 
-	char *name = "/home/fox/DSR/Mono/fib.txt";
-	char *name2 = "/home/fox/DSR/Mono/mono.txt";
-	int size;
-	int *mass = (int*)malloc(N * sizeof(int));
-
-	fp = fopen(name, "w+");
-	if( fp == NULL)
-		exit(1);
-	
-	for(int i = 1; i <= N; i++)
-	{
-		fprintf(fp, " %d", fib_n(i));
-	}
-
-	rewind(fp);
-
-	int n = 0;
-
-	while (fscanf(fp,"%d",&(mass[n])) != EOF)
-	{
-		n++;
-	}
-	fclose(fp);
-
-	fp = fopen(name2, "w");
-	if( fp == NULL)
-		exit(1);
-
 	for (int j = 0; j < N; j++)
 	{
 		if (j == 0)
@@ -67,6 +37,47 @@ int main()
 		}
 		else {mass[j] = mass[j-1];} 
 	}
+}
+
+void print_fp(FILE *fp)
+{
+	for(int i = 1; i <= N; i++)
+	{
+		fprintf(fp, " %d", fib_n(i));
+	}
+	rewind(fp);
+}
+void scan_fp(FILE *fp, int *mass, int n)
+{
+	while (fscanf(fp,"%d",&(mass[n])) != EOF)
+	{
+		n++;
+	}
+}
+int main()
+{
+	FILE *fp; 
+	char *name = "/home/fox/DSR/Mono/fib.txt";
+	char *name2 = "/home/fox/DSR/Mono/mono.txt";
+	int size;
+	int n = 0;
+	int *mass = (int*)malloc(N * sizeof(int));
+
+	fp = fopen(name, "w+");
+	if( fp == NULL)
+	{
+		exit(1);
+	}
+	print_fp(fp);
+	scan_fp(fp, mass, n);
+	fclose(fp);
+
+	fp = fopen(name2, "w");
+	if( fp == NULL)
+	{
+		exit(1);
+	}
+	mono(fp, mass);
 	free(mass);
 	fclose(fp);
 
