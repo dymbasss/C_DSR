@@ -59,7 +59,6 @@ int main()
 	FILE *fp; 
 	char *name = "/home/fox/DSR/Mono/fib.txt";
 	char *name2 = "/home/fox/DSR/Mono/mono.txt";
-	int size;
 	int n = 0;
 	int *mass = (int*)malloc(N * sizeof(int));
 
