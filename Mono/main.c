@@ -47,6 +47,7 @@ void print_fp(FILE *fp)
 	}
 	rewind(fp);
 }
+
 void scan_fp(FILE *fp, int *mass, int n)
 {
 	while (fscanf(fp,"%d",&(mass[n])) != EOF)
