@@ -1,4 +1,3 @@
-
 #include "header.h"
 #define N 3 // Количество уравнений
 
