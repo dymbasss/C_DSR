@@ -42,7 +42,7 @@ void get_word(char **str, char **word_mass, int number_str) // Получить 
     free(word);
 }
 
-void get_new_word(char **new_word_mass, char **word_mass) // Конкетинация слов во второй строке
+void get_new_word(char **new_word_mass, char **word_mass) // Конкатенация слов в первой строке
 {
     int i = 0;
 
@@ -76,22 +76,21 @@ int main ()
     get_str(fp, str);
     get_word(str, word_mass, 0);
     get_word(str, word_mass2, 1);
-    get_new_word(new_word_mass2, word_mass2);
+    get_new_word(new_word_mass2, word_mass);
     
         int i = 0;
         while (1)
         {
-          if (word_mass2[i] == '\0')
+          if (word_mass[i] == '\0' || new_word_mass2[i] == '\0')
           {
               break;
           }
 
-        for (int j = 0; word_mass[j] != '\0'; j++)
+        for (int j = 0; word_mass2[j] != '\0'; j++)
         {
-            if (strcmp(word_mass[j], new_word_mass2[i]) == 0 && strlen(word_mass[j]) == strlen(new_word_mass2[i]))
+            if (strcmp(word_mass2[j], new_word_mass2[i]) != 0 && strlen(word_mass2[j]) != strlen(new_word_mass2[i]))
             {
-                printf("Сходятся: %s | %s", word_mass[j], new_word_mass2[i]);
-                break;
+                printf("\nНе cходятся: %s | %s", word_mass2[j], new_word_mass2[i]);
             }
         }
         i++;
