@@ -20,9 +20,9 @@ Decision of system of linear equations by Gauss's method.
 
 Gauss's method of the solution of system of the linear equations includes 2 stages:
 
-Consecutive (direct) exception;
+1. Consecutive (direct) exception;
 
-Reverse substitution.
+2. Reverse substitution.
 
 The gaus function - Gauss's method of the solution of system of the linear equations(x1, x2....).
 
