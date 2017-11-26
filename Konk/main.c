@@ -15,6 +15,7 @@ void get_str(FILE *fp, char **str) // Получить стороки из фа�
             }
             size++;
         }
+        fclose(fp);
 }
 
 char **create(char **str) // Выделение памяти
@@ -44,13 +45,11 @@ void get_word(char **str, char **word_mass, int number_str) // Получить 
 void get_new_word(char **new_word_mass, char **word_mass) // Конкетинация слов во второй строке
 {
     int i = 0;
-        while (1)
+
+        while (i < 4)
         {
-            if( i > 4)
-            {
-                break;
-            }
                 new_word_mass[i] = strcat(strcat(new_word_mass[i], word_mass[i]), word_mass[i + 1]);
+                printf("%s ",new_word_mass[i]);
                 i++;
         }
 }
@@ -61,7 +60,7 @@ int main ()
     char **str = (char**)malloc(S * sizeof(char*));
     char **word_mass = (char**)malloc(N * sizeof(char*));
     char **word_mass2 = (char**)malloc(N * sizeof(char*));
-    char **new_word_mass2 = (char**)malloc(N * 2 * sizeof(char*));
+    char **new_word_mass2 = (char**)malloc(N * sizeof(char*));
     
     create(str);
     create(word_mass);
