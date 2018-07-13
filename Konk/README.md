@@ -1,4 +1,3 @@
----RU---
 # Текстовый файл состоит из двух строк. Определить, есть ли во второй строке слова, которые не получаются путем конкатенации нескольких слов из первой строки.
 
 - get_new_word -  конкатенация слов в первой строке;
@@ -9,7 +8,6 @@
 
 - get_str - получить стороки из файла;
 
----EN---
 # The text file consists of two lines. To define whether is in the second line of a word which don't turn out by concatenation of several words from the first line.
 
 - get_new_word - concatenation of words in the first line;
