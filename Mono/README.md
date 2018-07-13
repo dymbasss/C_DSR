@@ -4,9 +4,9 @@
 
 2. Два текстовых файла fib.txt и mono.txt:
 
- - fib.txt - числа фибаначи, после примения функции fib_n;
+- fib.txt - числа фибаначи, после примения функции fib_n;
 
- - mono.txt - монотонная последовательность после преобразования.
+- mono.txt - монотонная последовательность после преобразования.
 
 3. Функция mono - преобразование последовательности в монотонную.
 
@@ -20,9 +20,9 @@
 
 2. Two texts files fib.txt and mono.txt:
 
- - fib.txt - fibonacci's numbers, after function application fib_n;
+- fib.txt - fibonacci's numbers, after function application fib_n;
 
- - mono.txt - the monotonous sequence after transformation.
+- mono.txt - the monotonous sequence after transformation.
 
 3. Mono function - transformation in monotonous sequence.
 
